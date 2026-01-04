@@ -187,6 +187,38 @@
       margin: 0 5px;
     }
 
+    /* Estilos para o sistema de abas */
+    .abas {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+
+    .aba {
+      background: #3498db;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .aba:hover {
+      background: #2980b9;
+    }
+
+    .conteudo-aba {
+      display: none;
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .conteudo-aba.active {
+      display: block;
+    }
+
     /* Responsivo */
     @media(max-width: 600px) {
       header h1 { font-size: 2em; }
@@ -228,56 +260,13 @@
           <a class="instagram" href="https://instagram.com/Alvess.sg" target="_blank">Instagram</a>
         </div>
       </div>
-    </div>
 
-    <!-- Produto 2 -->
-    <div class="produto">
-      <img src="https://st2.depositphotos.com/3489481/6738/i/950/depositphotos_67382229-stock-photo-man-student-holding-a-book.jpg" alt="5 Maneiras de Alcançar Alto Foco">
-      <div class="produto-content">
-        <h3>5 Maneiras de Alcançar Alto Foco</h3>
-        <p>Aprenda 5 maneiras comprovadas de alcançar foco total! Nosso guia digital mostra técnicas simples e práticas para aumentar sua concentração e produtividade todos os dias.</p>
-        <div class="preco">R$ 14,99</div>
-        <div class="botoes">
-          <a class="whatsapp" href="https://wa.me/5593991454315?text=Olá,%20vim%20pelo%20site%20Alvilees%20e%20quero%20comprar" target="_blank">WhatsApp</a>
-          <a class="instagram" href="https://instagram.com/Alvess.sg" target="_blank">Instagram</a>
-        </div>
+      <!-- Abas do Produto -->
+      <div class="abas">
+        <div class="aba" onclick="abrirAba('info1')">Mais Informações</div>
+        <div class="aba" onclick="abrirAba('info2')">Depoimentos</div>
       </div>
-    </div>
 
-    <!-- Produto 3 (mantido) -->
-    <div class="produto">
-      <img src="https://via.placeholder.com/400x250?text=Produto+3" alt="Produto 3">
-      <div class="produto-content">
-        <h3>Produto Online 3</h3>
-        <p>Aprenda a usar ferramentas digitais de forma rápida e prática.</p>
-        <div class="preco">R$ 99,90</div>
-        <div class="botoes">
-          <a class="whatsapp" href="https://wa.me/5593991454315?text=Olá,%20vim%20pelo%20site%20Alvilees%20e%20quero%20comprar" target="_blank">WhatsApp</a>
-          <a class="instagram" href="https://instagram.com/Alvess.sg" target="_blank">Instagram</a>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- Seção Depoimentos -->
-  <section class="depoimentos">
-    <h2 class="section-title">O que nossos clientes dizem</h2>
-    <p>"Produto incrível, entrega rápida e suporte excelente!" - João S.</p>
-    <p>"Vale muito a pena, recomendo para todos." - Maria F.</p>
-    <p>"Fácil de usar e muito prático, adorei!" - Pedro L.</p>
-  </section>
-
-</div>
-
-<!-- Rodapé -->
-<footer>
-  <p>© 2026 - Alvilees | Todos os direitos reservados</p>
-  <p>Siga-nos: 
-    <a href="https://instagram.com/Alvess.sg" target="_blank">Instagram</a> | 
-    <a href="https://wa.me/5593991454315" target="_blank">WhatsApp</a>
-  </p>
-</footer>
-
-</body>
-</html>
+      <!-- Conteúdo das Abas -->
+      <div id="info1" class="conteudo-aba">
+        <p>Aqui você vai encontrar mais detalhes sobre o
